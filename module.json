@@ -1,7 +1,7 @@
 {
     "name": "wild-beyond-the-witchlight",
     "id": "wild-beyond-witchlight",
-    "title": "Utilities for The Wild Beyond the Witchlight",
+    "title": "The Lib Beyond the Witchlight",
     "description": "Adds utility functions that can be used in GM macros",
     "version": "0.0.1",
     "minimumCoreVersion": "0.6.0",
