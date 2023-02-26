@@ -1,0 +1,35 @@
+{
+    "name": "wild-beyond-the-witchlight",
+    "id": "wild-beyond-witchlight",
+    "title": "Utilities for The Wild Beyond the Witchlight",
+    "description": "Adds utility functions that can be used in GM macros",
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.6.0",
+    "compatibleCoreVersion": "10",
+    "compatibility": {
+        "minimum": "0.6",
+        "verified": "10.291"
+    },
+    "esmodules": [
+        "scripts/wild-beyond-witchlight.js"
+    ],
+    "url": "https://github.com/brouberol/wild-beyond-the-witchlight-foundry",
+    "manifest": "https://github.com/brouberol/wild-beyond-the-witchlight-foundry/raw/main/module.json",
+    "download": "https://github.com/brouberol/wild-beyond-the-witchlight-foundry/archive/main.zip",
+    "readme": "https://github.com/brouberol/wild-beyond-the-witchlight-foundry/raw/main/README.md",
+    "changelog": "",
+    "license": "MIT",
+    "bugs": "https://github.com/brouberol/wild-beyond-the-witchlight-foundry/issues",
+    "dependencies": [
+        {}
+    ],
+    "relationships": {},
+    "authors": [
+        {
+            "name": "brouberol",
+            "github": "brouberol"
+        }
+    ],
+    "manifestPlusVersion": "1.2.0",
+    "media": []
+}
