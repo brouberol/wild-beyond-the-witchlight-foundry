@@ -2,6 +2,11 @@
 
 const MODULE_ID = 'wild-beyond-witchlight'
 
+// We assume the carnival scene is using https://5e.tools/img/adventure/WBtW/015-map-1.1.jpg
+// as background image, in its original size.
+
+// x/y coordinates, in px, of the 9 mood tracker circles, on which we will
+// move the mood marker tile when increasing/decreasing the carnival mood.
 const moodTokenCoordinates = {
   '-4': [5227, 4513],
   '-3': [5278, 4258],
@@ -13,11 +18,9 @@ const moodTokenCoordinates = {
   '3':  [6327, 3211],
   '4':  [6581, 3169],
 };
-const DANGEROUS_MOOD_PLAYLIST = 'Carnival Dangerous';
-const CREEPY_MOOD_PLAYLIST = 'Carnival Creepy';
-const NEUTRAL_MOOD_PLAYLIST = 'Carnival Neutral';
-const HYPE_MOOD_PLAYLIST = 'Carnival Hype';
 
+// x/y coordinates, in px, of the 8 time tracker circles, on which we will
+// move the time marker tile when advancing the time.
 const timeTokenCoordinates = {
   '1': [175, 1467],
   '2': [455, 1410],
@@ -30,6 +33,13 @@ const timeTokenCoordinates = {
 };
 
 
+const DANGEROUS_MOOD_PLAYLIST = 'Carnival Dangerous';
+const CREEPY_MOOD_PLAYLIST = 'Carnival Creepy';
+const NEUTRAL_MOOD_PLAYLIST = 'Carnival Neutral';
+const HYPE_MOOD_PLAYLIST = 'Carnival Hype';
+
+
+// the time tracker tile is the one located on the top left of the sceene
 function findTimeTrackerTile(scene) {
   var minTileXCoordinate = 10000;
   var timeTrackerTile = null;
@@ -72,6 +82,7 @@ function advanceTime(scene) {
   setTime(scene, time);
 }
 
+// the mood tracker tile is the one located on the bottom right of the sceene
 function findMoodTrackerTile(scene) {
   var maxTileXCoordinate = 0;
   var moodTrackerTile = null;
@@ -183,7 +194,6 @@ class WildBeyondTheWitchLightCarnival {
     advanceTime(scene)
   }
 }
-
 
 Hooks.on('init', function () {
   game.modules.get(MODULE_ID).api = {
