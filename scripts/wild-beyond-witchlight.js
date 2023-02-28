@@ -45,7 +45,7 @@ const TICKET_PUNCH_TILE_NAME = "black-circle.png"
 function findTimeTrackerTile(scene) {
   var minTileXCoordinate = 10000;
   var timeTrackerTile = null;
-  scene.collections.tiles.filter((tile) => tile.texture.src.split("/")[-1] === TIME_AND_MOOD_MARKER_TILE_NAME).forEach((tile) => {
+  scene.collections.tiles.filter((tile) => tile.texture.src.endsWith(TIME_AND_MOOD_MARKER_TILE_NAME)).forEach((tile) => {
       if (tile.x < minTileXCoordinate) {
           minTileXCoordinate = tile.x;
           timeTrackerTile = tile;
@@ -88,7 +88,7 @@ function advanceTime(scene) {
 function findMoodTrackerTile(scene) {
   var maxTileXCoordinate = 0;
   var moodTrackerTile = null;
-  scene.collections.tiles.filter((tile) => tile.texture.src.split("/")[-1] === TIME_AND_MOOD_MARKER_TILE_NAME).forEach((tile) => {
+  scene.collections.tiles.filter((tile) => tile.texture.src.endsWith(TIME_AND_MOOD_MARKER_TILE_NAME)).forEach((tile) => {
       if (tile.x > maxTileXCoordinate) {
           maxTileXCoordinate = tile.x;
           moodTrackerTile = tile;
@@ -184,7 +184,7 @@ function decreaseMood(scene) {
 
 function findNextInvisibleTicketPunchTile(scene) {
   var hiddenTiles = [];
-  var tiles = scene.tiles.filter((tile) => tile.texture.src.split("/" [-1] === TICKET_PUNCH_TILE_NAME));
+  var tiles = scene.tiles.filter((tile) => tile.texture.src.endsWith(TICKET_PUNCH_TILE_NAME));
   tiles.forEach((tile) => {
     if (tile.hidden) {
       hiddenTiles.push(tile);
