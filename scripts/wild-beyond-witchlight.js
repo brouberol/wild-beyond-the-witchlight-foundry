@@ -37,15 +37,15 @@ const DANGEROUS_MOOD_PLAYLIST = 'Carnival Dangerous';
 const CREEPY_MOOD_PLAYLIST = 'Carnival Creepy';
 const NEUTRAL_MOOD_PLAYLIST = 'Carnival Neutral';
 const HYPE_MOOD_PLAYLIST = 'Carnival Hype';
-
-const TICKET_PUNCH_TILE_NAME = "token_circle.png"
+const TIME_AND_MOOD_MARKER_TILE_NAME = "token_circle.png"
+const TICKET_PUNCH_TILE_NAME = "black-circle.png"
 
 
 // the time tracker tile is the one located on the top left of the sceene
 function findTimeTrackerTile(scene) {
   var minTileXCoordinate = 10000;
   var timeTrackerTile = null;
-  scene.collections.tiles.forEach((tile) => {
+  scene.collections.tiles.filter((tile) => tile.name === TIME_AND_MOOD_MARKER_TILE_NAME).forEach((tile) => {
       if (tile.x < minTileXCoordinate) {
           minTileXCoordinate = tile.x;
           timeTrackerTile = tile;
@@ -88,7 +88,7 @@ function advanceTime(scene) {
 function findMoodTrackerTile(scene) {
   var maxTileXCoordinate = 0;
   var moodTrackerTile = null;
-  scene.collections.tiles.forEach((tile) => {
+  scene.collections.tiles.filter((tile) => tile.name === TIME_AND_MOOD_MARKER_TILE_NAME).forEach((tile) => {
       if (tile.x > maxTileXCoordinate) {
           maxTileXCoordinate = tile.x;
           moodTrackerTile = tile;
