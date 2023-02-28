@@ -38,6 +38,8 @@ const CREEPY_MOOD_PLAYLIST = 'Carnival Creepy';
 const NEUTRAL_MOOD_PLAYLIST = 'Carnival Neutral';
 const HYPE_MOOD_PLAYLIST = 'Carnival Hype';
 
+const TICKET_PUNCH_TILE_NAME = "token_circle.png"
+
 
 // the time tracker tile is the one located on the top left of the sceene
 function findTimeTrackerTile(scene) {
@@ -180,6 +182,34 @@ function decreaseMood(scene) {
   }
 }
 
+function findNextInvisibleTicketPunchTile(scene) {
+  var hiddenTiles = [];
+  var tiles = scene.tiles.filter((tile) => tile.texture.src.split("/" [-1] === TICKET_PUNCH_TILE_NAME));
+  tiles.forEach((tile) => {
+    if (tile.hidden) {
+      hiddenTiles.push(tile);
+    }
+  })
+  if (!hiddenTiles) {
+    return;
+  }
+  var hiddenTilesByAscendingX = hiddenTiles.sort((a, b) => {
+    return b.x < a.x ? 1 :
+      b.x > a.x ? -1 :
+      0;
+  });
+  return hiddenTilesByAscendingX[0];
+}
+
+function punchTicket(scene) {
+  var tile = findNextInvisibleTicketPunchTile(scene);
+  if (tile) {
+    tile.update({
+      hidden: false
+    });
+  }
+}
+
 class WildBeyondTheWitchLightCarnival {
 
   static increaseCarnivalMood(scene) {
@@ -191,7 +221,11 @@ class WildBeyondTheWitchLightCarnival {
   }
 
   static advanceTime(scene) {
-    advanceTime(scene)
+    advanceTime(scene);
+  }
+
+  static punchTicket(scene) {
+    punchTicket(scene);
   }
 }
 
@@ -200,6 +234,7 @@ Hooks.on('init', function () {
     increaseCarnivalMood: WildBeyondTheWitchLightCarnival.increaseCarnivalMood,
     decreaseCarnivalMood: WildBeyondTheWitchLightCarnival.decreaseCarnivalMood,
     advanceTime: WildBeyondTheWitchLightCarnival.advanceTime,
+    punchTicket: WildBeyondTheWitchLightCarnival.punchTicket,
   };
   Hooks.callAll('wildBeyondWitchLightReady', game.modules.get(MODULE_ID).api);
-})
+});
