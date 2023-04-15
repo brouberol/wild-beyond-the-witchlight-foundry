@@ -2,11 +2,17 @@ This repository defines a Foundry module providing utility functions for the Wit
 
 ## Installation
 
+
 You can install the module by specifying the manifest URL `https://raw.githubusercontent.com/brouberol/wild-beyond-the-witchlight-foundry/main/module.json` in the Foundry installation menu.
 
 ## What you get
 ### Map
 The module includes a `Witchlight Carnival` scene, with preconfigured tokens to mark the time and current mood, a carnival ticket image that can be made visible to players once they enter, as well as ticket punches tokens that can be made visible to players once they visit a carnival stand.
+
+| Time tracker | Mood tracker |
+|--------------|--------------|
+| <img width="100%" alt="Screenshot 2023-04-15 at 19 35 27" src="https://user-images.githubusercontent.com/480131/232245026-249b0965-32e7-4711-9aa9-ec962b30921b.png">|  <img width="100%" alt="Screenshot 2023-04-15 at 19 36 03" src="https://user-images.githubusercontent.com/480131/232245034-152b65d9-fa46-496a-bb37-fc66faaad3d3.png"> |
+
 
 ### Macros
 The module defines 4 macros:
@@ -15,8 +21,11 @@ The module defines 4 macros:
 - `Advance time`: advance the time marker by one on the board
 - `Punch ticket`: punch the ticket by revealing the next invisible ticket punch token on the board
 
+<img width="100%" alt="Screenshot 2023-04-15 at 19 34 56" src="https://user-images.githubusercontent.com/480131/232245137-67377aea-b7f2-49f9-b63e-9aad9e84aaa7.png">
+
+
 ### Playlists
-The module defines 4 playlists (:warn: these playlists do _not_ contain any sound! It is up to you to add the ambiances you like to each of the playlists)
+The module defines 4 playlists (⚠️ these playlists do _not_ contain any sound! It is up to you to add the ambiances you like to each of the playlists)
 
 - `Witchlight Carnival - Dangerous`: automatically played when the mood tracker goes to -4
 - `Witchlight Carnival - Creepy`: automatically played when the mood tracker goes between -3 and -1 (included)
