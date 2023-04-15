@@ -5,7 +5,10 @@ This repository defines a Foundry module providing utility functions for the Wit
 
 You can install the module by specifying the manifest URL `https://raw.githubusercontent.com/brouberol/wild-beyond-the-witchlight-foundry/main/module.json` in the Foundry installation menu.
 
+<img width="722" alt="Screenshot 2023-04-15 at 19 55 57" src="https://user-images.githubusercontent.com/480131/232245540-1ffbc082-04cb-4a99-84d2-f638d022610a.png">
+
 ## What you get
+
 
 This module defines Compendium packs that can be added to the appropriate Foundry menu by dragging and dropping the from the Compendium list.
 
