@@ -1,6 +1,6 @@
 
 
-const MODULE_ID = 'wild-beyond-witchlight'
+const MODULE_ID = 'witchlight-carnival-utils'
 
 // We assume the carnival scene is using https://5e.tools/img/adventure/WBtW/015-map-1.1.jpg
 // as background image, in its original size.
@@ -33,10 +33,10 @@ const timeTokenCoordinates = {
 };
 
 
-const DANGEROUS_MOOD_PLAYLIST = 'Carnival Dangerous';
-const CREEPY_MOOD_PLAYLIST = 'Carnival Creepy';
-const NEUTRAL_MOOD_PLAYLIST = 'Carnival Neutral';
-const HYPE_MOOD_PLAYLIST = 'Carnival Hype';
+const DANGEROUS_MOOD_PLAYLIST = 'Witchlight Carnival - Dangerous';
+const CREEPY_MOOD_PLAYLIST = 'Witchlight Carnival - Creepy';
+const NEUTRAL_MOOD_PLAYLIST = 'Witchlight Carnival - Neutral';
+const HYPE_MOOD_PLAYLIST = 'Witchlight Carnival - Joyous';
 const TIME_AND_MOOD_MARKER_TILE_NAME = "token_circle.png"
 const TICKET_PUNCH_TILE_NAME = "black-circle.png"
 
@@ -236,5 +236,5 @@ Hooks.on('init', function () {
     advanceTime: WildBeyondTheWitchLightCarnival.advanceTime,
     punchTicket: WildBeyondTheWitchLightCarnival.punchTicket,
   };
-  Hooks.callAll('wildBeyondWitchLightReady', game.modules.get(MODULE_ID).api);
-});
+  Hooks.callAll('witchLightCarnivalUtilsReady', game.modules.get(MODULE_ID).api);
+})

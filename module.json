@@ -1,9 +1,9 @@
 {
-    "name": "wild-beyond-the-witchlight",
-    "id": "wild-beyond-witchlight",
+    "name": "witchlight-carnival-utils",
+    "id": "witchlight-carnival-utils",
     "title": "The Lib Beyond the Witchlight",
-    "description": "Adds utility functions that can be used in GM macros",
-    "version": "0.0.2",
+    "description": "Provides a scene with preconfigured maros to run the Witchlight Carnival in the Wild Beyond the Witchlight D&D5e adventure",
+    "version": "0.0.1",
     "minimumCoreVersion": "0.6.0",
     "compatibleCoreVersion": "10",
     "compatibility": {
@@ -31,5 +31,28 @@
         }
     ],
     "manifestPlusVersion": "1.2.0",
-    "media": []
+    "media": [],
+    "system": [
+        "dnd5e"
+    ],
+    "packs": [
+        {
+            "name": "macros",
+            "label": "Witchlight Carnival - Macros",
+            "path": "/packs/macros.db",
+            "entity": "Macro"
+        },
+        {
+            "name": "playlists",
+            "label": "Witchlight Carnival - Playlists",
+            "path": "/packs/playlists.db",
+            "entity": "Playlist"
+        },
+        {
+            "name": "maps",
+            "label": "Witchlight Carnival - Scenes",
+            "path": "/packs/scenes.db",
+            "entity": "Scene"
+        }
+    ]
 }
