@@ -25,7 +25,7 @@ The module defines 4 macros:
 
 
 ### Playlists
-The module defines 4 playlists (⚠️ these playlists do _not_ contain any sound! It is up to you to add the ambiances you like to each of the playlists)
+The module defines 4 playlists (⚠️ these playlists do _not_ contain any sound! It is up to you to add the ambiances you like to each of the playlists). The main idea behind these playlists is that they get automatically played when the mood changes.
 
 - `Witchlight Carnival - Dangerous`: automatically played when the mood tracker goes to -4
 - `Witchlight Carnival - Creepy`: automatically played when the mood tracker goes between -3 and -1 (included)
