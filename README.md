@@ -6,7 +6,10 @@ This repository defines a Foundry module providing utility functions for the Wit
 You can install the module by specifying the manifest URL `https://raw.githubusercontent.com/brouberol/wild-beyond-the-witchlight-foundry/main/module.json` in the Foundry installation menu.
 
 ## What you get
-### Map
+
+This module defines Compendium packs that can be added to the appropriate Foundry menu by dragging and dropping the from the Compendium list.
+
+### Scene
 The module includes a `Witchlight Carnival` scene, with preconfigured tokens to mark the time and current mood, a carnival ticket image that can be made visible to players once they enter, as well as ticket punches tokens that can be made visible to players once they visit a carnival stand.
 
 | Time tracker | Mood tracker |
