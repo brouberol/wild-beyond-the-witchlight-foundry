@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Moved to https://git.balthazar-rouberol.com/brouberol/wild-beyond-the-witchlight-foundry
+
 This repository defines a Foundry module providing utility functions for the Witchlight Carnival chapter of the Wild Beyond The Witchlight D&amp;D 5e adventure.
 
 ## Installation
